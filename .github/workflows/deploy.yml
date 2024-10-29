@@ -14,12 +14,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - run: cd karangos
       - uses: actions/setup-node@v3
         with:
           node-version: 20
           cache: "npm"
 
-      - run: cd karangos
       - run: npm install
       - run: npm run build
       - name: Deploy
